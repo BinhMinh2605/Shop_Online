@@ -1,0 +1,28 @@
+﻿
+@{
+    var listGroup = (IEnumerable<Entity_first.Models.GioHang>)ViewBag.giohang;
+}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@Html.TextBox("StudentName", "hello everyone", new { @class = "form - control" })
+
+
+
+@foreach (var item in listGroup) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDKhachHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDSanPham)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+
