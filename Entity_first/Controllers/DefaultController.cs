@@ -32,13 +32,13 @@ namespace Entity_first.Controllers
 
         public ActionResult login()
         {
-            IList<GioHang> TV = new List<GioHang>()
+            IList<GioHang> TVy = new List<GioHang>()
               { new GioHang { ID=1 ,IDSanPham="2",IDKhachHang="1"},
            new GioHang {  ID=2 ,IDSanPham="3",IDKhachHang="2"}
                 };
-            ViewBag.list = TV;
+            ViewBag.list = TVy;
 
-            return  PartialView("login",TV);
+            return  PartialView("login",TVy);
         }
     }
 }
